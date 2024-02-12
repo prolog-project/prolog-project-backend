@@ -1,9 +1,8 @@
-package com.prolog.prologbackend.Controller;
+package com.prolog.prologbackend.Members.Controller;
 
-import com.prolog.prologbackend.DTO.ProjectList;
-import com.prolog.prologbackend.DTO.UserEmail;
-import com.prolog.prologbackend.DTO.UserInfo;
-import com.prolog.prologbackend.Service.MypageService;
+import com.prolog.prologbackend.Members.DTO.UserEmail;
+import com.prolog.prologbackend.Members.DTO.UserInfo;
+import com.prolog.prologbackend.Members.Service.MypageMemberService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -22,18 +21,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Author : Kim
- * date : 2024-02-11
- * description : MyPage 페이지에서 요청되는 API들입니다.
+ * date : 2024-02-12
+ * description : MyPage에서 사용되는 멤버 관련 API들입니다.
  */
 
-@Tag(name = "MyPage Api", description = "MyPage 페이지에서 요청되는 API들입니다.")
+@Tag(name = "MyPage Member Api", description = "MyPage 멤버 관련 API들입니다.")
 @RestController
 @RequestMapping(value = "/mypage")
 @RequiredArgsConstructor
-public class MypageController {
-    private final MypageService mypageService;
+public class MypageMemberController {
+    private final MypageMemberService mypageMemberService;
 
-    @Operation(summary = "좌측 화면의 유저의 기본적인 정보들을 가져옵니다.")
+    @Operation(summary = "마이페이지에서 좌측 화면의 유저에 대한 기본적인 정보들을 가져옵니다.")
     @GetMapping("/userinfo")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Success" , content = @Content(schema = @Schema(implementation = UserInfo.class))),
@@ -43,21 +42,8 @@ public class MypageController {
             @Parameter(name = "email", description = "유저의 이메일입니다.", example = "abcd0000@naver.com", required = true)
             @RequestBody @Validated final UserEmail userEmail
     ){
-        UserInfo userInfo = mypageService.getUserInfo(userEmail);
+        UserInfo userInfo = mypageMemberService.getUserInfo(userEmail);
         return ResponseEntity.status(HttpStatus.OK).body(userInfo);
     }
 
-    @Operation(summary = "사용자의 프로젝트 리스트를 반환합니다.")
-    @GetMapping("/project-list")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Success" , content = @Content(schema = @Schema(implementation = ProjectList.class))),
-            @ApiResponse(responseCode = "400", description = "Null"),
-    })
-    public ResponseEntity<ProjectList> getProjectList(
-            @Parameter(name = "email", description = "유저의 이메일입니다.", example = "abcd0000@naver.com", required = true)
-            @RequestBody @Validated final UserEmail userEmail
-    ){
-        ProjectList projectList = mypageService.getProjectList(userEmail);
-        return ResponseEntity.status(HttpStatus.OK).body(projectList);
-    }
 }

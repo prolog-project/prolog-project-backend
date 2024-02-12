@@ -1,7 +1,5 @@
-package com.prolog.prologbackend.Controller;
+package com.prolog.prologbackend.EmailTest;
 
-import com.prolog.prologbackend.DTO.EmailDTO;
-import com.prolog.prologbackend.EmailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

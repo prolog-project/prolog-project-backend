@@ -1,12 +1,9 @@
-package com.prolog.prologbackend.Service;
+package com.prolog.prologbackend.Members.Service;
 
-import com.prolog.prologbackend.DTO.ProjectList;
-import com.prolog.prologbackend.DTO.UserEmail;
-import com.prolog.prologbackend.DTO.UserInfo;
-import com.prolog.prologbackend.Domain.members;
+import com.prolog.prologbackend.Members.DTO.UserEmail;
+import com.prolog.prologbackend.Members.DTO.UserInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 
 /**
  * Author : Kim
@@ -16,18 +13,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class MypageServiceImpl implements MypageService{
-//    private final MypageRepository mypageRepository;
+public class MypageMemberServiceImpl implements MypageMemberService{
     @Override
     public UserInfo getUserInfo(UserEmail userEmail) {
 //        members members = mypageRepository.findByEmail(userEmail.getEmail());
         UserInfo userInfo = new UserInfo("asd","asd","asd","asd");
         return userInfo;
-    }
-
-    @Override
-    public ProjectList getProjectList(UserEmail userEmail) {
-        ProjectList projectList = new ProjectList();
-        return projectList;
     }
 }

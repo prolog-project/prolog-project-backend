@@ -1,11 +1,10 @@
-package com.prolog.prologbackend.DTO;
+package com.prolog.prologbackend.Project.DTO;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

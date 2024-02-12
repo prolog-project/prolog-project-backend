@@ -1,4 +1,4 @@
-package com.prolog.prologbackend.DTO;
+package com.prolog.prologbackend.Project.DTO;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;

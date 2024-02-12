@@ -1,9 +1,8 @@
-package com.prolog.prologbackend.DTO;
+package com.prolog.prologbackend.EmailTest;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,6 +14,8 @@ import lombok.Setter;
  * 링크를 누르면 리다이렉션 되어서 팀에 가입 하는 API를 서버로 날리도록 하면 될듯 합니다.
  *
  * 초대 URL을 어떻게 구성할지가 고민이네요
+ *
+ * 이메일 전송 관련 테스트입니다 추후 패키지 변경 예정
 */
 
 @Getter

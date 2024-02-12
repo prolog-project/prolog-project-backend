@@ -1,4 +1,4 @@
-package com.prolog.prologbackend.DTO;
+package com.prolog.prologbackend.Members.DTO;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
