@@ -1,4 +1,4 @@
-package com.prolog.prologbackend.Domain;
+package com.prolog.prologbackend.Project.Domain;
 
 import jakarta.persistence.Entity;
 import lombok.Getter;
