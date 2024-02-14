@@ -1,4 +1,4 @@
-package com.prolog.prologbackend.EmailTest;
+package com.prolog.prologbackend.Project.EmailTest;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

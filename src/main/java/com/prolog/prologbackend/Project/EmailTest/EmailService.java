@@ -1,4 +1,4 @@
-package com.prolog.prologbackend.EmailTest;
+package com.prolog.prologbackend.Project.EmailTest;
 
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;

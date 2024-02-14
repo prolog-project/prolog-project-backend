@@ -1,4 +1,4 @@
-package com.prolog.prologbackend.EmailTest;
+package com.prolog.prologbackend.Project.EmailTest;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
