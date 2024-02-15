@@ -15,7 +15,7 @@ import java.util.List;
 */
 @Getter
 @Setter
-public class Project {
+public class ProjectDetailRequestDTO {
 
     @Schema(description = "프로젝트를 구분하는 번호입니다.", nullable = false, example = "1")
     private int projectNum;

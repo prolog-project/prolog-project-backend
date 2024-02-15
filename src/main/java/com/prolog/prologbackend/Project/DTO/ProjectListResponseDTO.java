@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 @Getter
 @Setter
-public class ProjectList {
+public class ProjectListResponseDTO {
     @Schema(description = "프로젝트들을 담은 리스트입니다.", nullable = true, example = "{projectname:asd, projectnum:1, ~~~}")
-    private ArrayList<Project> projectList;
+    private ArrayList<ProjectDetailRequestDTO> projectList;
 }

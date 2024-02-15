@@ -1,7 +1,6 @@
 package com.prolog.prologbackend.Project.Service;
 
-import com.prolog.prologbackend.Project.DTO.ProjectList;
-import com.prolog.prologbackend.Members.DTO.UserEmail;
+import com.prolog.prologbackend.Project.DTO.ProjectListResponseDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +14,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class MypageProjectServiceImpl implements MypageProjectService{
     @Override
-    public ProjectList getProjectList(UserEmail userEmail) {
-        ProjectList projectList = new ProjectList();
+    public ProjectListResponseDTO getProjectList(Long userId) {
+        ProjectListResponseDTO projectList = new ProjectListResponseDTO();
         return projectList;
     }
 
